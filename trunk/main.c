@@ -3,7 +3,6 @@
 
 int main(void)
 {
-	inicializaEstrutura();
-	printf("Works! %s\n%s",forma.nome,forma.matriz_pontos);
-	system("pause");
+    imprimeSprite(TAMANHO_MAXIMO_MATRIZ_COLUNAS,TAMANHO_MAXIMO_MATRIZ_LINHAS);;
+	//system("pause");
 }
