@@ -9,15 +9,12 @@ menset(sprite, 0, TAMANHO_MAXIMO_MATRIZ_LINHAS * TAMANHO_MAXIMO_MATRIZ_COLUNAS *
 int main(void)
 {
 	while(1){
-		limpaSprite();
-		desenhaSprite();
+		limpaSprite();		//Preenche o sprite com pontos
+		desenhaNoSprite();	
 		imprimeSprite();
-		rodafigura();
+		movefigura();
 	}
-	
 
-    //dgetch();
-	//system("pause");
 	getch();
 	
 

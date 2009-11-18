@@ -54,8 +54,15 @@ static float scale = 1;
 
 // ---------------------------------------------------------------
 
-//OBSOLETA
+//[INICIO]OBSOLETA===========================================
 //Função responsável por limpar a área de memória estrutura
 void inicializaEstrutura(void);
+//[FIM]OBSOLETA===========================================
+
+void limpaSprite();
+
+void desenhaNoSprite();
+
+void movefigura();
 
 void imprimeSprite();

@@ -1,7 +1,8 @@
 #include <Math.h>
 #include "OperacoesGraficas.h"
 
-//Obsoleta
+
+//[INICIO]Obsoleta=====================================================================================
 void inicializaEstrutura(void)
 {
 	//preenche o nome com vazio
@@ -9,6 +10,8 @@ void inicializaEstrutura(void)
 	//preenche a matriz com ZERO literal
 	//memset(forma.matriz_pontos,'0',TAMANHO_MAXIMO_MATRIZ*TAMANHO_MAXIMO_MATRIZ*sizeof(char));
 }
+//[FIM]Obsoleta========================================================================================
+
 
 
 void limpaSprite()
@@ -25,7 +28,7 @@ void limpaSprite()
 	system("cls");
 }
 
-void desenhaSprite()
+void desenhaNoSprite()
 {
 	int ponto=0;
 	int x=1;
@@ -57,7 +60,7 @@ void desenhaSprite()
 	}
 }
 
-void rodafigura()
+void movefigura()
 {
 	int ponto=0;
 	int comando = 0;
@@ -110,15 +113,15 @@ void rodafigura()
 			figura[ponto][x] -= rot_pos[x];
 			figura[ponto][y] -= rot_pos[y];
 
-			temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);
-			temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);
+			temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);	//Rotação de X
+			temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);	//Rotaçao de Y
 
 			figura[ponto][x] = temp_x + rot_pos[x];
 			figura[ponto][y] = temp_y + rot_pos[y];
 		}
 	}
 
-	
+
 
 //75 esquerda
 //77 direita

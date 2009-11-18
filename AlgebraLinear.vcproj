@@ -169,6 +169,10 @@
 				RelativePath=".\OperacoesGraficas.c"
 				>
 			</File>
+			<File
+				RelativePath=".\util.c"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -177,6 +181,10 @@
 			>
 			<File
 				RelativePath=".\OperacoesGraficas.h"
+				>
+			</File>
+			<File
+				RelativePath=".\util.h"
 				>
 			</File>
 		</Filter>
