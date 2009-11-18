@@ -28,13 +28,17 @@
 				</Compiler>
 			</Target>
 		</Build>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="OperacoesGraficas.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="OperacoesGraficas.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
