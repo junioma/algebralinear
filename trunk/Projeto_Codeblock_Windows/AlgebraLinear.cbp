@@ -6,39 +6,42 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug Win32">
-				<Option output="AlgebraLinear" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Debug Win32" />
-				<Option type="0" />
+			<Target title="Debug">
+				<Option output="bin\Debug\AlgebraLinear" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-W" />
 					<Add option="-g" />
-					<Add option="-O0" />
 				</Compiler>
 			</Target>
-			<Target title="Release Win32">
-				<Option output="AlgebraLinear" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release Win32" />
-				<Option type="0" />
+			<Target title="Release">
+				<Option output="bin\Release\AlgebraLinear" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-W" />
 					<Add option="-O2" />
 				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="OperacoesGraficas.c">
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\Codigo_Fonte\OperacoesGraficas.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="OperacoesGraficas.h" />
-		<Unit filename="main.c">
+		<Unit filename="..\Codigo_Fonte\OperacoesGraficas.h" />
+		<Unit filename="..\Codigo_Fonte\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="util.c">
+		<Unit filename="..\Codigo_Fonte\util.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="util.h" />
+		<Unit filename="..\Codigo_Fonte\util.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -162,15 +162,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\main.c"
+				RelativePath="..\Codigo_Fonte\main.c"
 				>
 			</File>
 			<File
-				RelativePath=".\OperacoesGraficas.c"
+				RelativePath="..\Codigo_Fonte\OperacoesGraficas.c"
 				>
 			</File>
 			<File
-				RelativePath=".\util.c"
+				RelativePath="..\Codigo_Fonte\util.c"
 				>
 			</File>
 		</Filter>
@@ -180,11 +180,11 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\OperacoesGraficas.h"
+				RelativePath="..\Codigo_Fonte\OperacoesGraficas.h"
 				>
 			</File>
 			<File
-				RelativePath=".\util.h"
+				RelativePath="..\Codigo_Fonte\util.h"
 				>
 			</File>
 		</Filter>
