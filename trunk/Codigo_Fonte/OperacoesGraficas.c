@@ -56,7 +56,7 @@ void desenhaNoSprite()
 
 		// Os pontos só devem ser desenhados se estiverem dentro do sprite
 		if((temp_x >= 0 && temp_x < TAMANHO_MAXIMO_MATRIZ_COLUNAS) && (temp_y >= 0 && temp_y < TAMANHO_MAXIMO_MATRIZ_LINHAS))
-			sprite[temp_y][temp_x] = 1;
+			sprite[temp_y][temp_x] = CARACTERE_DESENHO;
 	}
 }
 
