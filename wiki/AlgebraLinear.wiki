@@ -9,9 +9,10 @@ Este trabalho tem por objetivo, aplicar alguns conceitos da álgebra linear em u
 ||*TECLA*||*FUNÇÃO*||
 ||7 || Rotaciona 30º à esquerda||
 ||9 || Rotaciona 30º à direita||
-||8 || move acima;||
-||4 || move a esquerda;||
-||2 || move abaixo;||
-||6 ||  move a direita;||
-||+ || aumenta o tamanho;||
-||- || diminui o tamanho;||
+||8 || Move acima;||
+||4 || Move a esquerda;||
+||2 || Move abaixo;||
+||6 || Move a direita;||
+||+ || Aumenta o tamanho;||
+||- || Diminui o tamanho;||
+||ESC || Sai do sistema;||
