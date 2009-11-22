@@ -79,7 +79,6 @@ void movefigura()
 	float temp_y=0;
 
 	comando = getch();
-	//printf("%i",comando);
 
     switch(comando)
     {
