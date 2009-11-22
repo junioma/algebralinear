@@ -1,17 +1,28 @@
+#include "util.h"
+
 #ifndef OPERACOESGRAFICAS_H_INCLUDED
     #define OPERACOESGRAFICAS_H_INCLUDED
-#endif // OPERACOESGRAFICAS_H_INCLUDED
+#endif /* OPERACOESGRAFICAS_H_INCLUDED */
+#if defined(SO_WINDOWS)
+    #define CLEAR_SCREEN "cls"
+#else
+    /*#define getch() getchar()*/ /*consegui uma implementação da web*/
+    #define CLEAR_SCREEN "clear"
+#endif
+
+
+
 #define TAMANHO_MAXIMO_MATRIZ_COLUNAS 40
 #define TAMANHO_MAXIMO_MATRIZ_LINHAS 20
 #define	TAMANHO_MAXIMO_NOME 2
-#define CARACTERE_DESENHO 1 //BONEQUINHO SORRINDO!
+#define CARACTERE_DESENHO '@'
 typedef enum _ENUM_TAMANHOS{
 	ENUM_TAMANHO_IMAGEM_BACTERIAS = 24,
 	ENUM_TAMANHO_IMAGEM_ROSTO = 34
 } ENUM_TAMANHOS;
 /*IMAGENS DISPONÍVEIS========================*/
 #define IMAGEM_BACTERIAS
-//#define IMAGEM_ROSTO
+/*#define IMAGEM_ROSTO*/
 /*===========================================*/
 
 /*Tipos================================================================*/
@@ -37,9 +48,9 @@ static char sprite[TAMANHO_MAXIMO_MATRIZ_LINHAS][TAMANHO_MAXIMO_MATRIZ_COLUNAS] 
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 };
 
-// ------------------ Dados da figura ----------------------------
+/*------------------ Dados da figura ----------------------------*/
 
-// COLONIA DE BACTÉRIAS
+/* COLONIA DE BACTÉRIAS*/
 #if defined(IMAGEM_BACTERIAS)
 static float figura[][2] =
 {
@@ -50,7 +61,7 @@ static float figura[][2] =
 	{0,4},                                    {7,4},
 	{0,5},{1,5},{2,5},{3,5},{4,5},{5,5},{6,5},{7,5}
 };
-// Quantidade de pontos na figura:
+/* Quantidade de pontos na figura:*/
 static char qtd_pontos = ENUM_TAMANHO_IMAGEM_BACTERIAS;
 #elif defined(IMAGEM_ROSTO)
 //{linha,coluna}
@@ -69,21 +80,21 @@ static float figura[][2] =
 static char qtd_pontos = ENUM_TAMANHO_IMAGEM_ROSTO;
 #endif
 
-// Eixo de rotação
+/* Eixo de rotação*/
 static char rot_pos[2] = {3, 3};
 
-// Posição da figura (linha - Y, coluna - X)
+/* Posição da figura (linha - Y, coluna - X)*/
 static char fig_pos[2] = {4, 14};
 
-// escala 
+/* escala*/
 static float scale = 1;
 
-// ---------------------------------------------------------------
+/* ---------------------------------------------------------------*/
 
-//[INICIO]OBSOLETA===========================================
-//Função responsável por limpar a área de memória estrutura
+/*[INICIO]OBSOLETA===========================================*/
+/*Função responsável por limpar a área de memória estrutura*/
 void inicializaEstrutura(void);
-//[FIM]OBSOLETA===========================================
+/*[FIM]OBSOLETA===========================================*/
 
 void limpaSprite();
 

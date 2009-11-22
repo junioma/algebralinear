@@ -1,16 +1,17 @@
-#include <Math.h>
 #include "OperacoesGraficas.h"
+#include <math.h>
 
-
-//[INICIO]Obsoleta=====================================================================================
+/*[INICIO]Obsoleta=====================================================================================*/
 void inicializaEstrutura(void)
 {
-	//preenche o nome com vazio
-	//memset(forma.nome,0,TAMANHO_MAXIMO_NOME*sizeof(char));
-	//preenche a matriz com ZERO literal
-	//memset(forma.matriz_pontos,'0',TAMANHO_MAXIMO_MATRIZ*TAMANHO_MAXIMO_MATRIZ*sizeof(char));
+#if 0
+	preenche o nome com vazio
+	memset(forma.nome,0,TAMANHO_MAXIMO_NOME*sizeof(char));
+	preenche a matriz com ZERO literal
+	memset(forma.matriz_pontos,'0',TAMANHO_MAXIMO_MATRIZ*TAMANHO_MAXIMO_MATRIZ*sizeof(char));
+#endif
 }
-//[FIM]Obsoleta========================================================================================
+/*[FIM]Obsoleta========================================================================================*/
 
 
 
@@ -25,7 +26,7 @@ void limpaSprite()
 			sprite[contadorLinhas][contadorColunas] = '.';
         }
     }
-	system("cls");
+	system(CLEAR_SCREEN);
 }
 
 void desenhaNoSprite()
@@ -40,23 +41,30 @@ void desenhaNoSprite()
 		temp_x=figura[ponto][x];
 		temp_y=figura[ponto][y];
 
-		// Aredondando os valores
+		/* Aredondando os valores*/
 		if((figura[ponto][x] - temp_x) > 0.5)
+		{
 			temp_x++;
-		if((figura[ponto][y] - temp_y) > 0.5)
-			temp_y++;
+		}
 
-		// Aplicando escala
+		if((figura[ponto][y] - temp_y) > 0.5)
+		{
+			temp_y++;
+		}
+
+		/* Aplicando escala*/
 		temp_x *= scale;
 		temp_y *= scale;
 
-		// Movendo a figura para a posição indicada
+		/* Movendo a figura para a posição indicada*/
 		temp_x += fig_pos[x];
 		temp_y += fig_pos[y];
 
-		// Os pontos só devem ser desenhados se estiverem dentro do sprite
+		/*Os pontos só devem ser desenhados se estiverem dentro do sprite*/
 		if((temp_x >= 0 && temp_x < TAMANHO_MAXIMO_MATRIZ_COLUNAS) && (temp_y >= 0 && temp_y < TAMANHO_MAXIMO_MATRIZ_LINHAS))
-			sprite[temp_y][temp_x] = CARACTERE_DESENHO;
+        {
+            sprite[temp_y][temp_x] = CARACTERE_DESENHO;
+        }
 	}
 }
 
@@ -71,60 +79,99 @@ void movefigura()
 	float temp_y=0;
 
 	comando = getch();
+	//printf("%i",comando);
 
-	if(comando == 45){// Menos
-		scale -= 0.3;
-	}
+    switch(comando)
+    {
+        case 27 : /* ESC */
+        {
+            exit(0);
+            break;
+        }
 
-	if(comando == 43){// Mais
-		scale += 0.3;
-	}
+        case 45 : /* Menos*/
+        {
+            scale -= 0.3;
+            break;
+        }
 
-	if(comando == 52){ // esquerda
-		fig_pos[x]--;
-	}
-	if(comando == 54){ // direita
-		fig_pos[x]++;
-	}
-	if(comando == 56){ // acima
-		fig_pos[y]--;
-	}
-	if(comando == 50){ // abaixo
-		fig_pos[y]++;
-	}
+        case 43 : /* Mais*/
+        {
+            scale += 0.3;
+            break;
+        }
 
-	if(comando == 55){ // Roda sentido ant-horario
-		angulo = -30;
-		for(ponto=0; ponto<qtd_pontos; ponto++){
+        case 52 : /* esquerda*/
+        {
+            fig_pos[x]--;
+            break;
+        }
 
-			figura[ponto][x] -= rot_pos[x];
-			figura[ponto][y] -= rot_pos[y];
+        case 54:/* direita*/
+        {
+            fig_pos[x]++;
+            break;
+        }
 
-			temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);
-			temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);
+        case 56:/* acima*/
+        {
+            fig_pos[y]--;
+            break;
+        }
 
-			figura[ponto][x] = temp_x + rot_pos[x];
-			figura[ponto][y] = temp_y + rot_pos[y];
-		}
-	}
-	if(comando == 57){// Roda sentido horario
-		angulo = 30;
-		for(ponto=0; ponto<qtd_pontos; ponto++){
-			figura[ponto][x] -= rot_pos[x];
-			figura[ponto][y] -= rot_pos[y];
+        case 50:/* abaixo*/
+        {
+            fig_pos[y]++;
+            break;
+        }
 
-			temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);	//Rotação de X
-			temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);	//Rotaçao de Y
+        case 55:/* Roda sentido ant-horario*/
+        {
+            angulo = -30;
+            for(ponto=0; ponto<qtd_pontos; ponto++){
 
-			figura[ponto][x] = temp_x + rot_pos[x];
-			figura[ponto][y] = temp_y + rot_pos[y];
-		}
-	}
+                figura[ponto][x] -= rot_pos[x];
+                figura[ponto][y] -= rot_pos[y];
+
+                temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);
+                temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);
+
+                figura[ponto][x] = temp_x + rot_pos[x];
+                figura[ponto][y] = temp_y + rot_pos[y];
+            }
+            break;
+        }
+
+        case 57:/* Roda sentido horario*/
+        {
+            angulo = 30;
+            for(ponto=0; ponto<qtd_pontos; ponto++){
+                figura[ponto][x] -= rot_pos[x];
+                figura[ponto][y] -= rot_pos[y];
+
+                temp_x = (figura[ponto][x])* cos(angulo*3.14/180) - (figura[ponto][y])* sin(angulo*3.14/180);	/*Rotação de X*/
+                temp_y = (figura[ponto][x]) * sin(angulo*3.14/180) + (figura[ponto][y]) * cos(angulo*3.14/180);	/*Rotaçao de Y*/
+
+                figura[ponto][x] = temp_x + rot_pos[x];
+                figura[ponto][y] = temp_y + rot_pos[y];
+            }
+            break;
+        }
+
+        default:
+        {
+            break;
+        }
+    }
 
 
 
-//75 esquerda
-//77 direita
+
+
+
+
+/*75 esquerda*/
+/*77 direita*/
 }
 
 void imprimeSprite()
