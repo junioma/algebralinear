@@ -1,13 +1,18 @@
 #summary One-sentence summary of this page.
 
 = Introdução =
+A álgebra linear é uma das vertentes da matemática amplamente aplicada em sistemas computacionais. Por meio desta, move-se um mercado bilionário de jogos e animações gráficas, fazendo inveja até ao poderoso mercado cinematográfico. Sua utilização vai desde o mais básico movimento de pontos de uma imagem computadorizada, até complexos cálculos que envolvem física a fim de simular eventos do mundo real em, por exemplo, jogos. 
 
-Add your content here.
+= Objetivo =
+Este trabalho tem por objetivo, aplicar alguns conceitos da álgebra linear em um sistema computacional que faça operações em pontos de imagens usando de um contexto de história fictícia.
+= Instruções do Software = 
 
-
-= Detalhes =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+||*TECLA*||*FUNÇÃO*||
+||7 || Rotaciona 30º à esquerda||
+||9 || Rotaciona 30º à direita||
+||8 || move acima;||
+||4 || move a esquerda;||
+||2 || move abaixo;||
+||6 ||  move a direita;||
+||+ || aumenta o tamanho;||
+||- || diminui o tamanho;||
