@@ -32,17 +32,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../OperacoesGraficas.c">
+		<Unit filename="../Codigo_Fonte/OperacoesGraficas.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../OperacoesGraficas.h" />
-		<Unit filename="../main.c">
+		<Unit filename="../Codigo_Fonte/OperacoesGraficas.h" />
+		<Unit filename="../Codigo_Fonte/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../util.c">
+		<Unit filename="../Codigo_Fonte/util.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../util.h" />
+		<Unit filename="../Codigo_Fonte/util.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
