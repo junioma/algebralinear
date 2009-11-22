@@ -1,5 +1,7 @@
-#summary One-sentence summary of this page.
 #labels Featured,Phase-Design
+* [Articles Introdução]
+    * [ArticlesXSS Objetivo]
+    * [ArticlesDom Instruções do Software]
 
 = Introdução =
 A álgebra linear é uma das vertentes da matemática amplamente aplicada em sistemas computacionais. Por meio desta, move-se um mercado bilionário de jogos e animações gráficas, fazendo inveja até ao poderoso mercado cinematográfico. Sua utilização vai desde o mais básico movimento de pontos de uma imagem computadorizada, até complexos cálculos que envolvem física a fim de simular eventos do mundo real em, por exemplo, jogos. 
