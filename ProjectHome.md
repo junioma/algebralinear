@@ -1,0 +1,1 @@
+Este projeto tem o objetivo de mostrar exemplos práticos da aplicação dos conceitos da álgebra linear em algoritmos escritos utilizando a linguagem C de computadores.
